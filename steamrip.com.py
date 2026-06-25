@@ -22,5 +22,5 @@ for game_page_url in games_list_page.find_all("li", {"class": "az-list-item"}):
         "link": BASE_URL + game_page_url.find("a").get("href")
     })
 
-    with open('data.json', 'a') as jfile:
+    with open('data.json', 'w') as jfile:
         json.dump(games, jfile)
